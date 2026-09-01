@@ -1,0 +1,9 @@
+{
+  "name": "coveragefit-ringcentral-maintenance",
+  "main": "ringcentral-maintenance-worker.mjs",
+  "compatibility_date": "2026-09-01",
+  "triggers": { "crons": ["20 */6 * * *"] },
+  "vars": {
+    "RINGCENTRAL_MAINTENANCE_URL": "https://coveragefit.com/api/sms/ringcentral/maintenance"
+  }
+}

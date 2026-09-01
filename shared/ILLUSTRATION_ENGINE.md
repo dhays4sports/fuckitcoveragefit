@@ -1,0 +1,1 @@
+Dynamic illustration registry and selection engine scaffold for all report types.
