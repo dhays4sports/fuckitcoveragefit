@@ -1,0 +1,49 @@
+{
+  "schema_version": "1.0",
+  "release": "CoverageFit v3.20.209",
+  "build": "CF-LEAD-OPS-1.0",
+  "sender": "408-LEAD-OPS-1.0",
+  "canonical_record": {
+    "storage": "COVERAGEFIT_DB D1",
+    "record_type": "coveragefit_lead_journey",
+    "prefix": "lead-ops/lead/",
+    "idempotency_key": "lead_checkpoint_id",
+    "lifecycle": ["started", "snapshot_completed", "contact_requested", "home_profile_ready", "policy_review_ready"]
+  },
+  "consent_model": {
+    "agency_contact": "personal agency follow-up only",
+    "automated_marketing_sms": "separate optional versioned evidence",
+    "snapshot_save_is_contact_permission": false,
+    "contact_request_is_marketing_permission": false,
+    "sms_permission_inferred_from_phone": false,
+    "sms_suppression_authoritative": true
+  },
+  "agencyzoom_routes": {
+    "personal_follow_up": {
+      "endpoint_secret": "AGENCYZOOM_WEB_LEAD_URL",
+      "enablement_guard": "AGENCYZOOM_AUTOMATION_SUPPRESSION_CONFIRMED=true",
+      "automated_sms_permission": false
+    },
+    "automated_marketing_sms": {
+      "endpoint_secret": "AGENCYZOOM_MARKETING_SMS_WEB_LEAD_URL",
+      "enablement_guard": "AGENCYZOOM_MARKETING_SMS_AUTOMATION_CONFIRMED=true",
+      "automated_sms_permission": true,
+      "requires_complete_consent_evidence": true
+    }
+  },
+  "failure_behavior": {
+    "wrong_or_missing_route_fails_closed": true,
+    "crm_failure_blocks_customer": false,
+    "durable_record_precedes_crm_sync": true,
+    "duplicate_stage_notification": false
+  },
+  "protected_boundaries": {
+    "secure_post_bootstrap": true,
+    "secure_resume_cookie": true,
+    "bootstrap_idempotency": true,
+    "no_pii_in_url": true,
+    "no_eligibility_inference": true,
+    "no_identity_merge_by_contact": true,
+    "no_bind_authority": true
+  }
+}

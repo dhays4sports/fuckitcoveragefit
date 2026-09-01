@@ -1,0 +1,28 @@
+{
+  "schema_version": "1.0",
+  "baseline": "CoverageFit v3.20.208 / CF-DISCOVERY-1.3",
+  "release": "CoverageFit v3.20.209 / CF-LEAD-OPS-1.0",
+  "count": 20,
+  "files": [
+    { "path": "CF-LEAD-OPS-1.0_CONSENT_AND_CRM_CONTRACT.json", "change": "added" },
+    { "path": "CF-LEAD-OPS-1.0_DEPLOYMENT.md", "change": "added" },
+    { "path": "CF-LEAD-OPS-1.0_RELEASE_CERTIFICATION.json", "change": "added" },
+    { "path": "CF-LEAD-OPS-1.0_RELEASE_NOTES.md", "change": "added" },
+    { "path": "RUN_REGRESSION_SUITE.js", "change": "modified" },
+    { "path": "VERSION", "change": "modified" },
+    { "path": "functions/api/lead/intake.js", "change": "added" },
+    { "path": "functions/api/lead/retry.js", "change": "added" },
+    { "path": "functions/api/pvx/checkpoint.js", "change": "modified" },
+    { "path": "functions/api/pvx/home-checkpoint.js", "change": "modified" },
+    { "path": "functions/api/pvx/policy-checkpoint.js", "change": "modified" },
+    { "path": "functions/api/pvx/web-bootstrap.js", "change": "modified" },
+    { "path": "package.json", "change": "modified" },
+    { "path": "server/lead-operations-core.mjs", "change": "added" },
+    { "path": "server/pvx-checkpoint-core.mjs", "change": "modified" },
+    { "path": "server/pvx-unified-producer-record-core.mjs", "change": "modified" },
+    { "path": "server/pvx-web-journey-core.mjs", "change": "modified" },
+    { "path": "server/web-pvx-mapping-core.mjs", "change": "modified" },
+    { "path": "tests/lead-operations-1.0.test.mjs", "change": "added" },
+    { "path": "wrangler.example.jsonc", "change": "modified" }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0",
+  "release": "CoverageFit v3.20.209",
+  "build": "CF-LEAD-OPS-1.0",
+  "sender": "408-LEAD-OPS-1.0",
+  "status": "production_ready_source",
+  "certified_at": "2026-08-29T19:01:46Z",
+  "release_blocking_gates": {
+    "canonical_regression_tests": { "passed": 34, "failed": 0 },
+    "lead_operations_tests": { "passed": 9, "failed": 0 },
+    "javascript_syntax": { "checked": 314, "failed": 0 },
+    "html_parse_and_duplicate_ids": { "checked": 41, "failed": 0 },
+    "cloudflare_functions_build": { "passed": true, "wrangler": "4.114.0" },
+    "visual_css_or_image_deltas": { "changed": 0 }
+  },
+  "diagnostic_nonblocking": {
+    "repository_wildcard_tests": { "passed": 44, "failed": 5 },
+    "same_failures_in_baseline_v3_20_208": { "passed": 35, "failed": 5 },
+    "reason": "Superseded historical 1.0/1.2 expectations: two bridge-copy strings and three obsolete eight-question discovery assertions. The versioned canonical runner is release-blocking."
+  },
+  "security_and_consent": {
+    "signed_intake": true,
+    "body_size_limit": 16384,
+    "idempotent_checkpoint": true,
+    "durable_before_crm": true,
+    "separate_agency_contact_and_marketing_sms": true,
+    "wrong_pipeline_fails_closed": true,
+    "sms_suppression_authoritative": true,
+    "pii_in_visible_url": false,
+    "professional_eligibility_inferred": false,
+    "bind_authority": false
+  },
+  "external_approval_required": ["agency legal/compliance review", "two AgencyZoom web lead integrations", "Cloudflare secrets", "controlled production canary"]
+}

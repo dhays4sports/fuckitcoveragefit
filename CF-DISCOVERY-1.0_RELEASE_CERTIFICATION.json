@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.0",
+  "release": "CoverageFit v3.20.205",
+  "build": "CF-DISCOVERY-1.0",
+  "status": "certified",
+  "certified_at": "2026-08-29T00:00:00Z",
+  "automated_tests": { "command": "npm test", "tests": 12, "passed": 12, "failed": 0 },
+  "syntax_gate": { "scope": "assets, server, functions, workers JavaScript", "passed": true },
+  "protected_visual_hashes": { "files": 57, "changed": 0, "passed": true },
+  "security": {
+    "post_only_bootstrap": true,
+    "idempotent_bootstrap": true,
+    "pii_in_visible_url": false,
+    "pii_in_analytics": false,
+    "automated_sms_permission_inferred": false,
+    "professional_eligibility_inferred": false,
+    "bind_authority_introduced": false
+  },
+  "behavior": {
+    "zero_repeat_prefill": true,
+    "anonymous_skip": true,
+    "renter_snapshot": true,
+    "home_snapshot_before_deep_profile": true,
+    "sms_product_keywords_preserved": true,
+    "callback_product_keyword_escape": true,
+    "protection_score_changed": false
+  },
+  "external_canary_required": true
+}

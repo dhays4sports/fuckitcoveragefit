@@ -1,0 +1,39 @@
+{
+  "schema_version": "1.0",
+  "release": "CoverageFit v3.20.208",
+  "build": "CF-DISCOVERY-1.3",
+  "sender": "408-DISCOVERY-1.3",
+  "status": "production_ready_source",
+  "certified_at": "2026-08-29T17:18:32Z",
+  "release_blocking_gates": {
+    "coveragefit_regression": { "passed": 25, "failed": 0 },
+    "cross_repository_assertions": { "passed": 21, "failed": 0 },
+    "javascript_syntax": { "checked": 310, "failed": 0 },
+    "representative_html": { "parsed": 8, "duplicate_id_failures": 0 },
+    "visual_baseline": { "compared": 104, "changed": 0, "missing": 0 },
+    "additive_clarity_stylesheets": { "added": 1, "framework_dependencies_added": 0 }
+  },
+  "clarity_contract": {
+    "calendar_reference_preserved_byte_for_byte": true,
+    "single_purpose_secure_opening": true,
+    "plain_remaining_question_count": true,
+    "first_snapshot_primary": true,
+    "known_answers_repeated": false,
+    "coveragefit_identity_and_palette_preserved": true,
+    "global_layout_replaced": false
+  },
+  "protected_boundaries": {
+    "secure_post_bootstrap": true,
+    "secure_resume_cookie": true,
+    "bootstrap_idempotency": true,
+    "confirmed_identity_reused": true,
+    "anonymous_identity_fabricated": false,
+    "pii_in_visible_url": false,
+    "contact_permission_inferred": false,
+    "automated_sms_permission_inferred": false,
+    "professional_eligibility_inferred": false,
+    "protection_score_changed": false,
+    "bind_authority_introduced": false
+  },
+  "live_canary_required": true
+}

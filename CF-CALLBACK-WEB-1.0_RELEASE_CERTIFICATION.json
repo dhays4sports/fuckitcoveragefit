@@ -1,0 +1,34 @@
+{
+  "release": "CF-CALLBACK-WEB-1.0",
+  "runtime": "3.20.211",
+  "status": "automated_gates_passed_live_canary_required",
+  "certified_at": "2026-08-29T00:00:00.000Z",
+  "automated_results": {
+    "callback_browser_booking": { "passed": 7, "failed": 0 },
+    "full_regression_including_callback_booking": { "passed": 50, "failed": 0 }
+  },
+  "gates": {
+    "post_only": true,
+    "signed_408_booking": true,
+    "same_origin_snapshot_booking": true,
+    "bounded_body": true,
+    "browser_date_time_picker": true,
+    "explicit_call_permission_required": true,
+    "marketing_sms_consent_not_inferred": true,
+    "no_scheduling_sms_required": true,
+    "idempotent_google_event": true,
+    "busy_slot_alternatives": true,
+    "no_pii_in_url": true,
+    "no_pii_in_analytics": true,
+    "public_calendar_record_has_no_phone": true,
+    "existing_product_keyword_routes_preserved": true,
+    "existing_inbound_sms_scheduler_preserved": true,
+    "existing_add_to_calendar_page_reused": true
+  },
+  "external_activation_gates": [
+    "COVERAGEFIT_LEAD_SYNC_SECRET matches the 408 Worker secret",
+    "COVERAGEFIT_DB remains bound",
+    "Google OAuth and calendar secrets remain valid",
+    "Controlled browser-booking production canary passes"
+  ]
+}

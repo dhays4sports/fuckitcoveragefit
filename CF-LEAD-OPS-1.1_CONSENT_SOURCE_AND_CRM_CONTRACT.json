@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.1",
+  "release": "CoverageFit v3.20.210",
+  "build": "CF-LEAD-OPS-1.1",
+  "source_contract": {
+    "bounded_catalog": "CF-LEAD-OPS-1.1_AGENCYZOOM_SOURCE_CATALOG.json",
+    "route_specific_secret": "AGENCYZOOM_SOURCE_ROUTES_JSON",
+    "source_is_not_campaign": true,
+    "source_is_not_consent": true,
+    "callback_preserves_original_source": true,
+    "arbitrary_destination_injection": false
+  },
+  "contact_bases": {
+    "explicit_agency_contact_consent": {
+      "personal_call": true,
+      "personal_text": true,
+      "automated_marketing_sms": "requires separate evidence"
+    },
+    "requested_transaction_follow_up": {
+      "allowed_source": "web_408_life",
+      "scope": "life_application_issue_resolution",
+      "automated_marketing_sms": false
+    },
+    "inbound_sms_request": {
+      "allowed_sources": "sms_*",
+      "scope": "respond to the inbound request",
+      "automated_marketing_sms": false
+    }
+  },
+  "life_privacy": {
+    "system_of_record": "encrypted LIFE_QUEUE_DB",
+    "projection_after_queue_write": true,
+    "projected": ["opaque checkpoint", "name", "email", "optional mobile", "source", "campaign attribution", "transaction-follow-up evidence"],
+    "prohibited": ["date of birth", "residential address", "ZIP", "SSN last four", "protection priorities", "income runway", "existing life coverage answers"],
+    "crm_failure_blocks_application": false
+  },
+  "sms": {
+    "restartable_keywords": ["HOME", "AUTO", "LIFE", "BUSINESS", "BUYER", "BUNDLE", "TECH"],
+    "stop_authoritative": true,
+    "inbound_is_marketing_consent": false,
+    "lead_idempotency": "one checkpoint per RingCentral conversation; one AgencyZoom started projection after bounded intake is ready",
+    "professional_eligibility_inferred": false
+  },
+  "protected_boundaries": {
+    "no_pii_in_url": true,
+    "no_pii_in_analytics": true,
+    "sms_suppression_authoritative": true,
+    "no_bind_authority": true,
+    "identity_merge_by_contact": false,
+    "existing_discovery_ui_changed": false
+  }
+}

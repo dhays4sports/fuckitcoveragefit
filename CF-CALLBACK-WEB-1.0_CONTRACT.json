@@ -1,0 +1,47 @@
+{
+  "contract_id": "CF-CALLBACK-WEB-1.0",
+  "runtime_version": "3.20.211",
+  "schema_version": "408-callback-browser-booking-v1",
+  "effective_date": "2026-08-29",
+  "entry_endpoints": {
+    "signed_408_booking": "/api/callback/web-book",
+    "coveragefit_snapshot_booking": "/api/callback/customer-book"
+  },
+  "requirements": {
+    "method": "POST",
+    "max_body_bytes": 8192,
+    "signed_request_clock_skew_seconds": 300,
+    "same_origin_snapshot": true,
+    "checkpoint_call_permission": true,
+    "valid_callback_number": true,
+    "bounded_weekday_date_and_time": true
+  },
+  "lifecycle": {
+    "calendar": "Existing Google Calendar availability and event creation",
+    "completion_stage": "callback_scheduled",
+    "customer_calendar_page": "/appointment/?token=opaque",
+    "google_calendar_action": true,
+    "phone_calendar_action": true,
+    "inbound_sms_callback_workflow": "preserved separately"
+  },
+  "permission": {
+    "stored_purpose": "scheduled_callback",
+    "explicit_call_request": true,
+    "automated_scheduling_sms": false,
+    "automated_marketing_sms": false,
+    "snapshot_requires_preexisting_call_permission": true,
+    "existing_sms_permission_and_suppression": "unchanged"
+  },
+  "idempotency": "Request UUID is the durable booking key and deterministic Google Calendar event ID.",
+  "privacy": {
+    "pii_in_visible_url": false,
+    "pii_in_analytics": false,
+    "public_appointment_record_contains_phone": false,
+    "arbitrary_destination_injection": false
+  },
+  "failure_behavior": {
+    "busy_time": "Return up to two bounded alternatives",
+    "calendar_or_storage_failure": "Return an accurate error without a booking claim",
+    "text_fallback_required": false
+  }
+}

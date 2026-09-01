@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0",
+  "release": "CoverageFit v3.20.207",
+  "build": "CF-DISCOVERY-1.2",
+  "inherits": "CF-DISCOVERY-1.1",
+  "objective": "Confirm the agency relationship and carried-answer continuity without changing CoverageFit's established visual system.",
+  "brand_bridge": {
+    "secure_opening_kicker": "Virginia Tam Insurance Agency → CoverageFit",
+    "agency_connection_line": "Connected from Virginia Tam Insurance Agency.",
+    "carried_answer_assurance": "We brought your earlier answers with you, so you won’t have to start over.",
+    "shown_only_when_answers_are_carried": true,
+    "full_408_header_added": false,
+    "farmers_logo_added": false,
+    "coveragefit_palette_preserved": true
+  },
+  "continuity_guardrails": {
+    "carried_answers_repeated": false,
+    "anonymous_identity_fabricated": false,
+    "confirmed_identity_reused": true,
+    "remaining_question_count_truthful": true,
+    "snapshot_is_primary_completion_action": true
+  },
+  "security_and_semantic_boundaries": {
+    "post_only_bootstrap": true,
+    "pii_in_visible_url": false,
+    "secure_resume_cookie_changed": false,
+    "idempotency_changed": false,
+    "contact_permission_inferred": false,
+    "automated_sms_permission_inferred": false,
+    "professional_eligibility_inferred": false,
+    "protection_score_changed": false,
+    "bind_authority": false
+  }
+}

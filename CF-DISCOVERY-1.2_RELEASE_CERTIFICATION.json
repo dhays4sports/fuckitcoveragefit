@@ -1,0 +1,37 @@
+{
+  "schema_version": "1.0",
+  "release": "CoverageFit v3.20.207",
+  "build": "CF-DISCOVERY-1.2",
+  "sender": "408-DISCOVERY-1.2",
+  "status": "production_ready_source",
+  "certified_at": "2026-08-29T16:57:34Z",
+  "release_blocking_gates": {
+    "coveragefit_regression": { "passed": 23, "failed": 0 },
+    "cross_repository_assertions": { "passed": 14, "failed": 0 },
+    "javascript_syntax": { "checked": 309, "failed": 0 },
+    "representative_html": { "parsed": 8, "duplicate_id_failures": 0 },
+    "visual_baseline": { "compared": 104, "changed": 0, "missing": 0 }
+  },
+  "brand_bridge": {
+    "agency_connection_confirmed": true,
+    "carried_answer_assurance_truthful": true,
+    "direct_entry_continuity_fabricated": false,
+    "full_408_header_added": false,
+    "farmers_logo_added": false,
+    "coveragefit_palette_preserved": true
+  },
+  "protected_boundaries": {
+    "secure_post_bootstrap": true,
+    "secure_resume_cookie": true,
+    "bootstrap_idempotency": true,
+    "confirmed_identity_reused": true,
+    "anonymous_identity_fabricated": false,
+    "pii_in_visible_url": false,
+    "contact_permission_inferred": false,
+    "automated_sms_permission_inferred": false,
+    "professional_eligibility_inferred": false,
+    "protection_score_changed": false,
+    "bind_authority_introduced": false
+  },
+  "live_canary_required": true
+}

@@ -1,0 +1,49 @@
+{
+  "schema_version": "1.0",
+  "release": "CoverageFit v3.20.206",
+  "build": "CF-DISCOVERY-1.1",
+  "inherits": "CF-DISCOVERY-1.0",
+  "objective": "Preserve CoverageFit's established visual language while making the first Snapshot the fastest and most obvious useful result.",
+  "product_tracks": {
+    "home": ["shoppingReason", "improvementPriorities", "ownershipDuration", "upgradeSummary", "claimExperience", "permissionToAdvise"],
+    "buyer": ["shoppingReason", "improvementPriorities", "ownershipDuration", "upgradeSummary", "otherProperties", "claimExperience", "permissionToAdvise"],
+    "auto": ["shoppingReason", "improvementPriorities", "annualMileage", "vehicleCount", "liabilityKnowledge", "permissionToAdvise"],
+    "bundle": ["shoppingReason", "improvementPriorities", "ownershipDuration", "annualMileage", "vehicleCount", "permissionToAdvise"],
+    "renter": ["shoppingReason", "improvementPriorities", "renterProperty", "renterPriorities", "permissionToAdvise"]
+  },
+  "conversion_guardrails": {
+    "progress_counts_only_questions_the_visitor_must_answer": true,
+    "carried_answers_are_acknowledged": true,
+    "carried_answers_are_repeated": false,
+    "snapshot_is_primary_completion_action": true,
+    "refinement_is_optional_secondary_action": true,
+    "home_questions_remaining_after_408_entry_context": 4,
+    "home_questions_remaining_after_sms_context": 5,
+    "buyer_questions_remaining_after_purchase_context": 5,
+    "bundle_questions_remaining_after_entry_context": 5,
+    "auto_questions_remaining_after_sms_context": 5,
+    "renter_questions_remaining_after_home_entry_context": 3,
+    "not_sure_supported": true
+  },
+  "deferred_until_optional_continuation": {
+    "home": ["stayIntent", "otherProperties"],
+    "buyer": ["stayIntent"],
+    "auto": ["drivers"],
+    "bundle": ["upgradeSummary", "drivers"]
+  },
+  "visual_boundary": {
+    "existing_css_or_image_modified": false,
+    "existing_layout_system_replaced": false,
+    "additive_component": "assets/css/pvx-discovery-conversion-1.1.css",
+    "component_purpose": "small continuity acknowledgment within the existing CoverageFit shell"
+  },
+  "semantic_boundaries": {
+    "discovery_changes_protection_score": false,
+    "discovery_creates_policy_finding": false,
+    "discovery_creates_recommendation": false,
+    "discovery_creates_eligibility": false,
+    "snapshot_view_creates_contact_permission": false,
+    "automated_sms_permission_inferred": false,
+    "bind_authority": false
+  }
+}

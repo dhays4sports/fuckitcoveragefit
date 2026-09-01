@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.0",
+  "release": "CoverageFit v3.20.210",
+  "build": "CF-LEAD-OPS-1.1",
+  "governing_rules": {
+    "source_is_acquisition_origin": true,
+    "campaign_is_not_source": true,
+    "consent_is_not_source": true,
+    "callback_is_lifecycle_action_not_source": true,
+    "all_entry_stages_start_without_automation": true,
+    "automated_marketing_requires_separate_verified_consent": true
+  },
+  "sources": [
+    { "key": "web_408_general", "agencyzoom_name": "Web — 408farmers.com General", "pipeline": "Personal Insurance", "entry_stage": "New — Review Needed" },
+    { "key": "web_408_home", "agencyzoom_name": "Web — 408farmers.com Home", "pipeline": "Personal Insurance", "entry_stage": "New — Review Needed" },
+    { "key": "web_408_home_auto", "agencyzoom_name": "Web — 408farmers.com Home + Auto", "pipeline": "Personal Insurance", "entry_stage": "New — Review Needed" },
+    { "key": "web_408_buyer", "agencyzoom_name": "Web — 408farmers.com Buyer", "pipeline": "Personal Insurance", "entry_stage": "New — Review Needed" },
+    { "key": "web_408_life", "agencyzoom_name": "Web — 408farmers.com Life", "pipeline": "Life", "entry_stage": "New — Review Needed" },
+    { "key": "web_408_tech", "agencyzoom_name": "Web — 408farmers.com Technology", "pipeline": "Personal Insurance", "entry_stage": "New — Review Needed" },
+    { "key": "web_408_teachers", "agencyzoom_name": "Web — 408farmers.com Teachers", "pipeline": "Personal Insurance", "entry_stage": "New — Review Needed" },
+    { "key": "web_408_healthcare", "agencyzoom_name": "Web — 408farmers.com Healthcare", "pipeline": "Personal Insurance", "entry_stage": "New — Review Needed" },
+    { "key": "web_408_engineers", "agencyzoom_name": "Web — 408farmers.com Engineers", "pipeline": "Personal Insurance", "entry_stage": "New — Review Needed" },
+    { "key": "web_408_contact", "agencyzoom_name": "Web — 408farmers.com Contact", "pipeline": "Personal Insurance", "entry_stage": "New — Review Needed" },
+    { "key": "web_coveragefit_home", "agencyzoom_name": "Web — CoverageFit Home", "pipeline": "Personal Insurance", "entry_stage": "New — Review Needed" },
+    { "key": "web_coveragefit_business", "agencyzoom_name": "Web — CoverageFit Business", "pipeline": "Personal Insurance", "entry_stage": "New — Review Needed" },
+    { "key": "web_coveragefit_landlord", "agencyzoom_name": "Web — CoverageFit Landlord", "pipeline": "Personal Insurance", "entry_stage": "New — Review Needed" },
+    { "key": "web_coveragefit_nonrenewal", "agencyzoom_name": "Web — CoverageFit Non-renewal", "pipeline": "Personal Insurance", "entry_stage": "New — Review Needed" },
+    { "key": "sms_home", "agencyzoom_name": "SMS — 408-FARMERS HOME", "pipeline": "Personal Insurance", "entry_stage": "New — Review Needed" },
+    { "key": "sms_auto", "agencyzoom_name": "SMS — 408-FARMERS AUTO", "pipeline": "Personal Insurance", "entry_stage": "New — Review Needed" },
+    { "key": "sms_buyer", "agencyzoom_name": "SMS — 408-FARMERS BUYER", "pipeline": "Personal Insurance", "entry_stage": "New — Review Needed" },
+    { "key": "sms_bundle", "agencyzoom_name": "SMS — 408-FARMERS HOME + AUTO", "pipeline": "Personal Insurance", "entry_stage": "New — Review Needed" },
+    { "key": "sms_life", "agencyzoom_name": "SMS — 408-FARMERS LIFE", "pipeline": "Life", "entry_stage": "New — Review Needed" },
+    { "key": "sms_business", "agencyzoom_name": "SMS — 408-FARMERS BUSINESS", "pipeline": "Personal Insurance", "entry_stage": "New — Review Needed" },
+    { "key": "sms_tech", "agencyzoom_name": "SMS — 408-FARMERS TECH", "pipeline": "Personal Insurance", "entry_stage": "New — Review Needed" },
+    { "key": "sms_general", "agencyzoom_name": "SMS — 408-FARMERS General", "pipeline": "Personal Insurance", "entry_stage": "New — Review Needed" },
+    { "key": "referral_realtor_buyer", "agencyzoom_name": "Referral — Realtor Buyer", "pipeline": "Personal Insurance", "entry_stage": "New — Review Needed" },
+    { "key": "referral_neighbor", "agencyzoom_name": "Referral — Neighbor", "pipeline": "Personal Insurance", "entry_stage": "New — Review Needed" },
+    { "key": "referral_408_local", "agencyzoom_name": "Referral — 408 Local", "pipeline": "Personal Insurance", "entry_stage": "New — Review Needed" }
+  ],
+  "excluded_non_lead_surfaces": [
+    "save-contact/vCard download",
+    "passive Snapshot view",
+    "thank-you and legal pages",
+    "404 pages",
+    "life producer operations shell",
+    "408 Local merchant application"
+  ]
+}

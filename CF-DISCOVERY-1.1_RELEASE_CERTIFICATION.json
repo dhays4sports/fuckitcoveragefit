@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.0",
+  "release": "CoverageFit v3.20.206",
+  "build": "CF-DISCOVERY-1.1",
+  "status": "certified",
+  "certified_at": "2026-08-29T00:00:00Z",
+  "automated_tests": {
+    "command": "npm test",
+    "tests": 20,
+    "passed": 20,
+    "failed": 0
+  },
+  "syntax_and_markup": {
+    "javascript_files": 305,
+    "javascript_failed": 0,
+    "representative_html_pages": 3,
+    "duplicate_id_failures": 0
+  },
+  "visual_preservation": {
+    "baseline_css_and_image_files": 103,
+    "changed": 0,
+    "missing": 0,
+    "additive_css_files": 1,
+    "existing_layout_system_replaced": false,
+    "passed": true
+  },
+  "conversion_behavior": {
+    "remaining_question_progress": true,
+    "carried_answer_acknowledgment": true,
+    "repeated_questions": 0,
+    "home_remaining_after_408_entry_context": 4,
+    "home_remaining_after_sms_context": 5,
+    "buyer_remaining_after_purchase_context": 5,
+    "bundle_remaining_after_entry_context": 5,
+    "auto_remaining_after_sms_context": 5,
+    "snapshot_primary_completion_action": true,
+    "optional_refinement_secondary": true
+  },
+  "protected_behavior": {
+    "secure_post_bootstrap": true,
+    "idempotent_bootstrap": true,
+    "anonymous_skip": true,
+    "known_identity_zero_repeat": true,
+    "renter_snapshot": true,
+    "sms_product_keywords_preserved": true,
+    "callback_product_keyword_escape": true,
+    "protection_score_changed": false,
+    "professional_eligibility_inferred": false,
+    "automated_sms_permission_inferred": false,
+    "bind_authority_introduced": false
+  },
+  "external_canary_required": true
+}

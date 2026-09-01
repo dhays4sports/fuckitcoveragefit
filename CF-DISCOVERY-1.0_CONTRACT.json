@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.0",
+  "release": "CoverageFit v3.20.205",
+  "build": "CF-DISCOVERY-1.0",
+  "contract_id": "coveragefit-multi-product-discovery-v1",
+  "objective": "Carry customer discovery across web and SMS entry points, ask only genuinely unanswered questions, and produce a useful Snapshot before optional deeper intake.",
+  "product_tracks": {
+    "home": ["shoppingReason", "improvementPriorities", "ownershipDuration", "stayIntent", "upgradeSummary", "otherProperties", "claimExperience", "permissionToAdvise"],
+    "buyer": ["shoppingReason", "improvementPriorities", "ownershipDuration", "stayIntent", "upgradeSummary", "otherProperties", "claimExperience", "permissionToAdvise"],
+    "auto": ["shoppingReason", "improvementPriorities", "annualMileage", "vehicleCount", "drivers", "liabilityKnowledge", "permissionToAdvise"],
+    "bundle": ["shoppingReason", "improvementPriorities", "ownershipDuration", "upgradeSummary", "annualMileage", "vehicleCount", "drivers", "permissionToAdvise"],
+    "renter": ["shoppingReason", "improvementPriorities", "renterProperty", "renterPriorities", "permissionToAdvise"]
+  },
+  "entry_continuity": {
+    "web_bootstrap": "POST /api/pvx/web-bootstrap",
+    "sms_keywords": ["HOME", "AUTO", "LIFE", "BUSINESS", "BUYER"],
+    "pvx_destination": "/pvx/discovery/",
+    "prefilled_questions_are_not_repeated": true,
+    "known_identity_is_reused_only_with_confirmed_checkpoint_and_consent": true,
+    "anonymous_skip_remains_anonymous": true
+  },
+  "snapshot_boundaries": {
+    "discovery_changes_protection_score": false,
+    "discovery_creates_eligibility": false,
+    "discovery_creates_underwriting_approval": false,
+    "snapshot_view_creates_contact_permission": false,
+    "professional_context_proves_discount": false,
+    "bind_authority": false
+  },
+  "consent_boundaries": {
+    "agency_contact_consent_is_separate": true,
+    "snapshot_save_is_separate": true,
+    "contact_request_is_separate": true,
+    "sms_call_email_permissions_are_separate": true,
+    "automated_sms_permission_is_never_inferred": true,
+    "sms_suppression_remains_authoritative": true
+  },
+  "producer_output": {
+    "type": "conversation_ready_producer_brief",
+    "includes": ["productTrack", "answered discovery", "missing discovery", "exact customer words", "suggested opener", "recommended next question"],
+    "actual_recommendations": false,
+    "eligibility_conclusion": false
+  }
+}

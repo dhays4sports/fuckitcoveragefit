@@ -1,0 +1,22 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "coveragefit-displacement-discovery",
+  "main": "workers/displacement-discovery-worker.mjs",
+  "compatibility_date": "2026-08-24",
+  "triggers": {
+    "crons": ["15 15 * * *", "15 20 * * *", "15 1 * * *"]
+  },
+  "vars": {
+    "COVERAGEFIT_DISCOVERY_MONTHLY_REQUEST_LIMIT": "900",
+    "COVERAGEFIT_DISCOVERY_RESULT_LIMIT": "8",
+    "COVERAGEFIT_DISCOVERY_QUERIES_PER_SWEEP": "8"
+  },
+  "d1_databases": [
+    {
+      "binding": "COVERAGEFIT_DB",
+      "database_name": "coveragefit-production",
+      "database_id": "REPLACE_WITH_PRODUCTION_D1_DATABASE_ID",
+      "migrations_dir": "migrations"
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0",
+  "release": "CoverageFit v3.20.208",
+  "build": "CF-DISCOVERY-1.3",
+  "inherits": "CF-DISCOVERY-1.2",
+  "objective": "Apply the add-to-calendar page's single-purpose clarity to the secure opening and discovery payoff without making unrelated pages visually identical.",
+  "reference_surface": {
+    "route": "/appointment/",
+    "interaction_qualities": [
+      "one obvious purpose",
+      "one dominant outcome",
+      "short confirmation copy",
+      "large unmistakable actions",
+      "trust information after the action",
+      "calm centered card"
+    ],
+    "protected_hashes": {
+      "appointment/index.html": "59fbd79b82aa7b5f24c1a5e240b158380611e6d46411c5fe369186799550ae2e",
+      "assets/css/callback-calendar.css": "9ddc6b5fd5109382396dfb7b88c42779c142ff4021506aae274c12fc408fa268",
+      "assets/js/callback-calendar.js": "b177792d72faa1300878efff4fad8af66a2145ed48a6ef4a287e268a877f93a7"
+    }
+  },
+  "clarity_rules": {
+    "one_immediate_decision_per_screen": true,
+    "primary_cta_max_words": 5,
+    "primary_cta_describes_payoff": true,
+    "technical_explanation_inside_primary_cta": false,
+    "supporting_copy_max_sentences": 2,
+    "known_answers_acknowledged_without_repetition": true,
+    "remaining_work_expressed_plainly": true,
+    "legal_boundary_preserved_below_action": true
+  },
+  "approved_copy": {
+    "secure_connection": "Connected from Virginia Tam Insurance Agency",
+    "secure_title": "Opening your Snapshot.",
+    "carried_title": "You won’t have to start over.",
+    "carried_copy_pattern": "Your earlier answers are already connected. {count} quick questions left.",
+    "completion_title": "Your first Snapshot is ready.",
+    "primary_completion_action": "See my Snapshot",
+    "optional_completion_action": "Add optional details first"
+  },
+  "visual_boundary": {
+    "coveragefit_logo_and_palette_preserved": true,
+    "calendar_page_modified": false,
+    "global_layout_replaced": false,
+    "new_additive_style": "assets/css/pvx-clarity-1.3.css",
+    "new_framework_dependency": false
+  },
+  "protected_boundaries": {
+    "post_only_bootstrap": true,
+    "idempotency_changed": false,
+    "secure_cookie_changed": false,
+    "anonymous_identity_fabricated": false,
+    "contact_permission_inferred": false,
+    "automated_sms_permission_inferred": false,
+    "professional_eligibility_inferred": false,
+    "protection_score_changed": false,
+    "bind_authority": false
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "name": "coveragefit",
+  "version": "3.20.215",
+  "private": true,
+  "description": "CoverageFit v3.20.215 + RC-MAINT-1.0 with seven-day RingCentral webhook subscriptions, six-hour automatic health checks and repair, strict end-to-end connection health, missed-message recovery, browser callback booking, route-aware lead operations, and privacy-safe life handling.",
+  "scripts": {
+    "test": "node RUN_REGRESSION_SUITE.js",
+    "cloudflare:dev": "wrangler pages dev .",
+    "cloudflare:functions:build": "wrangler pages functions build --outdir=.cloudflare/functions-dist",
+    "cloudflare:discovery:deploy": "wrangler deploy --config wrangler.discovery.jsonc",
+    "cloudflare:discovery:dev": "wrangler dev --config wrangler.discovery.jsonc",
+    "test:discovery": "node --test tests/discovery-intake-regression-1.1.test.mjs tests/discovery-conversion-1.1.test.mjs tests/discovery-ux-clarity-1.3.test.mjs",
+    "test:lead-ops": "node --test tests/lead-operations-1.0.test.mjs tests/lead-operations-1.1.test.mjs tests/sms-entry-routing-1.1.test.mjs",
+    "test:callback-web": "node --test tests/callback-web-continuity-1.0.test.mjs tests/callback-web-continuity-1.1.test.mjs"
+  },
+  "devDependencies": {
+    "wrangler": "4.114.0"
+  }
+}

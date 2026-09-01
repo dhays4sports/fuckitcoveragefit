@@ -1,0 +1,54 @@
+{
+  "contract_id": "CF-CALLBACK-WEB-1.1",
+  "runtime_version": "3.20.212",
+  "schema_version": "408-callback-browser-booking-v1",
+  "effective_date": "2026-08-30",
+  "supersedes_forward_runtime_behavior": "CF-CALLBACK-WEB-1.0",
+  "entry_endpoints": {
+    "signed_408_booking": "/api/callback/web-book",
+    "coveragefit_snapshot_booking": "/api/callback/customer-book"
+  },
+  "requirements": {
+    "method": "POST",
+    "max_body_bytes": 8192,
+    "signed_request_clock_skew_seconds": 300,
+    "call_request_evidence_clock_skew_seconds": 300,
+    "same_origin_snapshot": true,
+    "checkpoint_call_permission": true,
+    "valid_callback_number": true,
+    "bounded_weekday_date_and_time": true
+  },
+  "slot_ownership": {
+    "google_event_id": "Deterministic SHA-256-derived identifier scoped to calendar, start, and end",
+    "owner_evidence": "Private Google Calendar extended property coveragefitRequestId",
+    "concurrent_different_request_ids": "At most one request owns the exact slot; the other receives bounded alternatives",
+    "same_request_retry": "Recovers its existing Google event and completes the public appointment record without creating another event"
+  },
+  "interrupted_write_recovery": {
+    "calendar_event_created_public_record_missing": "Verify the deterministic event owner, recreate the deterministic public record, and finalize the durable booking",
+    "public_calendar_token": "Deterministic opaque token derived from calendar and request UUID",
+    "false_booking_claim_on_failure": false
+  },
+  "consent_evidence": {
+    "authoritative_timestamp": "CoverageFit server receipt time",
+    "client_timestamp_preserved_separately": true,
+    "signed_relay_timestamp_preserved_separately": true,
+    "future_or_stale_client_timestamp_rejected": true,
+    "automated_marketing_sms_inferred": false
+  },
+  "privacy": {
+    "pii_in_visible_url": false,
+    "pii_in_analytics": false,
+    "public_appointment_record_contains_phone": false,
+    "arbitrary_destination_injection": false
+  },
+  "preserved_behavior": [
+    "Existing polished add-to-calendar page",
+    "Google Calendar and phone-calendar actions",
+    "Inbound SMS callback scheduling",
+    "HOME/AUTO/LIFE/BUSINESS/BUYER/BUNDLE/TECH keyword routing",
+    "SMS permission and STOP suppression",
+    "CoverageFit discovery and Snapshot behavior",
+    "AgencyZoom route-aware source projection"
+  ]
+}
